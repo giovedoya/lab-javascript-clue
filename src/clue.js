@@ -97,7 +97,13 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom(aleatoryArr) {
+aleatoryCardStack = aleatoryArr.length;
+value = Math.random() * aleatoryArr.length;
+indexValue = Math.floor(value)
+return aleatoryArr[indexValue]
+
+}
 
 function pickMystery() {}
 
