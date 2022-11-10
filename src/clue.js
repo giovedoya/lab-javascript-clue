@@ -106,7 +106,7 @@ return aleatoryArr[indexValue]
 
 }
 
-function pickMystery(pickArr) {
+function pickMystery() {
     let suspect = suspectsArray[Math.floor(Math.random() * suspectsArray.length)]
     let weapon = weaponsArray[Math.floor(Math.random() * weaponsArray.length)]
     let room = roomsArray[Math.floor(Math.random() * roomsArray.length)]    
@@ -116,12 +116,9 @@ function pickMystery(pickArr) {
 
 // ITERATION 3
 
-function revealMystery(murderer) {
-    
-    let whoismurderer = pickMystery()
-
-    return whoismurderer
-
+function revealMystery(murderer) { 
+   
+    return (`${murderer.suspect.firstName} ${murderer.suspect.lastName} killled Mr. Boddy using the ${murderer.weapon.name} in the ${murderer.room.name}`);
 
 }
 
