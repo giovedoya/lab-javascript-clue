@@ -83,6 +83,7 @@ const roomsArray = [
 // Weapons Array
 
 const weaponsArray = [
+
     { name: 'rope', weight: 10},
     { name: 'knife', weight: 8},
     { name: 'candlestick', weight: 2},
@@ -105,10 +106,22 @@ return aleatoryArr[indexValue]
 
 }
 
-function pickMystery() {}
+function pickMystery(pickArr) {
+    let suspect = suspectsArray[Math.floor(Math.random() * suspectsArray.length)]
+    let weapon = weaponsArray[Math.floor(Math.random() * weaponsArray.length)]
+    let room = roomsArray[Math.floor(Math.random() * roomsArray.length)]    
+    return { suspect, weapon, room }
+}
 
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(murderer) {
+    
+    let whoismurderer = pickMystery()
+
+    return whoismurderer
+
+
+}
 
